@@ -8,19 +8,41 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>Pods-canvasTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-canvasUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>4BFCC2BA961CE651064C6EF2E0F893AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC17129DB784957AA58077343F0C6701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E077A95D583BE048D960313E6EDBB527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
