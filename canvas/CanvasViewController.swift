@@ -9,6 +9,12 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
+    
+    var trayDownOffset: CGFloat!
+    var trayUp: CGPoint!
+    var trayDown: CGPoint!
+    
+    
    
     
     @IBOutlet weak var trayView: UIView!
@@ -26,12 +32,30 @@ class CanvasViewController: UIViewController {
             
         } else if sender.state == .ended {
             print("Gesture ended")
+            var velocity = sender.velocity(in: view)
+            if velocity.y > 0 {
+                UIView.animate(withDuration:0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] ,
+                               animations: { () -> Void in
+                                self.trayView.center = self.trayDown
+                }, completion: nil)
+            }
+            else {
+                
+                UIView.animate(withDuration:0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options:[] ,
+                               animations: { () -> Void in
+                                self.trayView.center = self.trayUp
+                }, completion: nil)
+            
+            }
         }
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        trayDownOffset = 200
+        trayUp = trayView.center
+        trayDown = CGPoint(x: trayView.center.x, y:trayView.center.y + trayDownOffset)
 
         // Do any additional setup after loading the view.
     }
