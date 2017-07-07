@@ -1,0 +1,6 @@
+framework module Pods_canvasTests {
+  umbrella header "Pods-canvasTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
